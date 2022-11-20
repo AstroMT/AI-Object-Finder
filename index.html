@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Object Finder</title>
+</head>
+
+<body>
+  <center>
+    <div class="header">
+      <h2 class="heading">AI Object Finder</h2>
+      <h5>The application will detect the object if the input matches one of the names present in the COCOSSD model.</h5>
+    </div>
+
+    <input type="text" class="input" placeholder="Enter the object's name...">
+    
+    <br>
+    
+    <button class="btn btn-success"  id="start_button" onclick="start()">Start</button>
+    
+    <br>
+    
+    <button class="btn btn-danger" id="status_label">Status: </button>
+    <button class="btn btn-warning" id="found_label">Found: </button>
+  </center>
+</body>
+
+</html>
