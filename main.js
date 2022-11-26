@@ -34,7 +34,6 @@ function draw() {
 
     if (current_status != "") {
         objectDetector.detect(video, gotResult);
-        document.getElementById("status_label").innerHTML = "Status: Detection Finished";
         input = document.getElementById("object_input").value;
         console.log(input);
 
@@ -49,10 +48,12 @@ function draw() {
             rect(objects[i].width, objects[i].height, objects[i].x, objects[i].y);
 
             if(objects[i].label == input) {
-                document.getElementById("found_label").innerHTML = "A " + input + " was found"
+                document.getElementById("found_label").innerHTML = "Objects Found: A " + input + " was found"
             } else {
-                document.getElementById("found_label").innerHTML = "A " + input + " was not found"
+                document.getElementById("found_label").innerHTML = "Objects Found: A " + input + " was not found"
             }
+
+            document.getElementById("status_label").innerHTML = "Status: Detection Finished";
         }
     }
 }
